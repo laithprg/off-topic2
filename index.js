@@ -67,9 +67,23 @@ chooseblyerForm.addEventListener('submit',function(e){
 randomPlayerIndex=Math.floor(Math.random()*players.length);
 offobjectPlayer=players[randomPlayerIndex];
 offobjectPlayer.status=false;
+ 
+
+animalsArray=[
+    'سيارة','عامود كهرباء','كيبورد','ساعة','تفاحة',
+    'كمبيوتر','بحر','طائرة','كرسي',
+    'قلم','مفتاح','ثلاجة','جبل','كتاب',
+    'هاتف','نافذة','مصباح','حذاء','كرة',
+    'باب','قمر','شجرة','سفينة','نظارة','حقيبة',
+    'مرآة','مروحة','تلفاز','سماعة','درج','مصعد',
+    'جسر','قطار','دراجة','مظلة','كاميرا','وسادة',
+    'بطارية','ساعة رملية','شمعة','ملعقة','شوكة',
+    'صحن','كوب','زجاجة','خريطة','مقص','مطرقة',
+    'مغناطيس','روبوت','فيل','زرافة','ذئب','ثعلب',
+    'دب','أرنب','سلحفاة','تمساح','كنغر','غزال'
+];
 
 
-animalsArray=['اسد','نمر','صقر','قطة','عصفور','حمامة','بطة','بطريق'];
 randomAnimalIndex=Math.floor(Math.random()*(animalsArray.length));
 finalAnimal=animalsArray[randomAnimalIndex];
 startphase2();
@@ -138,7 +152,7 @@ function startphase2(){
 
                 container3Span3.textContent=finalAnimal;
                 container3Span3.classList.add('animal-name');
-                container3p.textContent='الحيوان هو';
+                container3p.textContent='الموضوع هو';
                 container3p.appendChild(container3Span3);
                 container3.appendChild(container3p);
             }
